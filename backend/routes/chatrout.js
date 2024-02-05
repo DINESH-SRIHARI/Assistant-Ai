@@ -9,6 +9,7 @@ const openai = new OpenAI({
 const router=express.Router()
 router.post('/chat',async(req,res)=>{
     const {prompt}=req.body
+    console.log(prompt)
     try {
         const response = await openai.completions.create({
             model: "gpt-3.5-turbo-instruct",
@@ -19,6 +20,7 @@ router.post('/chat',async(req,res)=>{
             frequency_penalty: 0,
             presence_penalty: 0,
           });
+          console.log(response.choices[0].text)
           res.send({ data: response.choices[0].text });
     } catch (error) {
         res.status(500).send(error)

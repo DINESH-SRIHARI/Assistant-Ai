@@ -11,7 +11,7 @@ function App() {
     try {
       setloding(true); 
   
-      const response = await fetch("https://ai-chatgpt-jra8.onrender.com/chat", {
+      const response = await fetch("https://ai-chatgpt-jra8.onrender.com", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
