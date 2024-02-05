@@ -3,7 +3,7 @@ const dotenv=require('dotenv')
 const OpenAI = require("openai");
 dotenv.config()
 const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
+  apiKey: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,
 });
 
 const router=express.Router()
